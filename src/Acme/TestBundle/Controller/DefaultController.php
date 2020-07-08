@@ -56,6 +56,28 @@ class DefaultController extends Controller
             $output["message"] = "Correcto";
             $output["resultado"] = $result;	
         }
+        else if($form_data["action"] == 'Producto')
+        {
+         
+            $query = "SELECT nombre FROM producto";
+            $em= $this->getDoctrine()->getManager();
+            $statement = $em->getConnection()->prepare($query);
+            $statement->execute($data);
+            $result = $statement->fetchAll();
+            $output["message"] = "Correcto";
+            $output["resultado"] = $result;
+        }
+        else if($form_data["action"] == 'get_producto')
+        {
+            $query = "SELECT nombre, precio_unitario FROM producto where nombre = :nombre";
+            $em= $this->getDoctrine()->getManager();
+            $statement = $em->getConnection()->prepare($query);
+            $statement->bindValue(':nombre', $form_data["seleccion"]);
+            $statement->execute($data);
+            $result = $statement->fetch();
+            $output["message"] = "Correcto";
+            $output["resultado"] = $result;	
+        }
         else{
             $output["request"] = $form_data;
         }

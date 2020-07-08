@@ -223,7 +223,7 @@ $scope.$watch('opciones_busqueda',function(newValue, oldValue){
 		{
 			$http({
 				method: 'POST',
-				url: 'busquedas.php',
+				url: 'busqueda',
 				data: {'action':'get_producto', 'seleccion': seleccionado}
 			}).then(function successCallback(response) {
 				
