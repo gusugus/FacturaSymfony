@@ -24,7 +24,9 @@
     {% block stylesheets %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     
-		<style>
+	<style>
+		
+		
 		input{
 			border-radius: 10px;
 		}
@@ -39,7 +41,7 @@
 			.grid-container-header-left{
 				display:grid;
 				grid-template-columns: auto;
-				
+				//border-right: 2px solid #73AD21;
 				
 			}		
 			
@@ -48,14 +50,14 @@
 				grid-template-columns: auto;
 				border-radius: 25px;
 				border: 2px solid #73AD21;
-				grid-gap:1em;
+				grid-column-gap:1em;
 				
 			}	
 			
 			.grid-container-two-columns{
 				display:grid;
 				grid-template-columns: 2fr 2fr;
-				
+				//border: 2px solid #f76707;
 
 			}
 			
@@ -84,12 +86,15 @@
 
 			
 		
-		
+			//Fill one column
 			.grid-one-column{
 				grid-column-end: span 1;
+				//border: 2px solid #f76707;
 			}
+			//Fill two columns
 			.grid-two-columns{
 				grid-column-end: span 2;
+				//border: 2px solid #f76707;
 			}
 			.fondo
 			{
@@ -98,7 +103,9 @@
 				padding-right:1em;
 				background-color: darkgoldenrod;
 			}
-	
+			#header-empresa-nombre{
+				
+			}
 			.center-text{
 				text-align:center;
 			}
@@ -158,7 +165,7 @@
 				width:100%;
 			}
 			.subcontainer-pago-izquierdo-round{
-				border-radius: 40px;
+				order-radius: 40px;
 				border: 2px solid #73AD21;
 				width:100%;
 				min-width:70%;
@@ -172,6 +179,8 @@
 				border-top: 2px solid black;
 				border-left: 2px solid black;
 				border-bottom : 2px solid black;
+				
+				//max-width:100;
 			}
 			.border-righ{
 				border-right:2px solid #73ad21;
@@ -188,8 +197,8 @@
 				position: absolute;
 			}
 			
-        </style>
-        {% endblock %}
+		</style>
+		        {% endblock %}
 
 	</head>
 
@@ -414,16 +423,23 @@
 							<h4>{[{iva_12}]}</h4>
 						</div>
 						
-						<div class="grid-one-column row_valor_total">
+						<div class="grid-one-column ">
 							<h4>VALOR TOTAL</h4>
 						</div>
-						<div class="grid-one-column row_valor_total">
+						<div class="grid-one-column ">
 							<h4>{[{factura_total}]}</h4>
+						</div>
+
+						<div class="grid-one-column ">
+							<h4>1</h4>
+						</div>
+						<div class="grid-one-column ">
+							<h4>1</h4>
 						</div>
 					</div>
 				</div>
 				
-			
+				
 		</div>
 		
 	<button ng-click="finalizar_facturacion()" class="btn btn-secundary btn-info" ng-disabled="btn_guardar" >Guardar Factura </button>
