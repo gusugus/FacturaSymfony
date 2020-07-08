@@ -1,0 +1,34 @@
+user2:
+    path:     /
+    defaults: { _controller: "AcmeTestBundle:User2:index" }
+
+user2_show:
+    path:     /{id}/show
+    defaults: { _controller: "AcmeTestBundle:User2:show" }
+
+user2_new:
+    path:     /new
+    defaults: { _controller: "AcmeTestBundle:User2:new" }
+
+user2_factura:
+    path:     /factura
+    defaults: { _controller: "AcmeTestBundle:User2:factura" }
+
+user2_create:
+    path:     /create
+    defaults: { _controller: "AcmeTestBundle:User2:create" }
+    requirements: { _method: post }
+
+user2_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AcmeTestBundle:User2:edit" }
+
+user2_update:
+    path:     /{id}/update
+    defaults: { _controller: "AcmeTestBundle:User2:update" }
+    requirements: { _method: post|put }
+
+user2_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AcmeTestBundle:User2:delete" }
+    requirements: { _method: post|delete }

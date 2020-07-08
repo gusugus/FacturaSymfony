@@ -1,0 +1,15 @@
+Acme\TestBundle\Entity\User2:
+    type: entity
+    table: null
+    repositoryClass: Acme\TestBundle\Entity\User2Repository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

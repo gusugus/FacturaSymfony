@@ -1,0 +1,11 @@
+acme_test_user2:
+    resource: "@AcmeTestBundle/Resources/config/routing/user2.yml"
+    prefix:   /user2
+
+acme_test_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AcmeTestBundle:Default:index }
+
+acme_test_busqueda:
+    path:     /user2/busqueda
+    defaults: { _controller: AcmeTestBundle:Default:busqueda }
